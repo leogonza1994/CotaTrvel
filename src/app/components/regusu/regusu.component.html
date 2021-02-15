@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="text-center my-5">Registro de Usuario</h1>
+  <div class="row d-flex justify-content-center mt-5">
+      <div class="col-4">
+
+          <form #registrarUsuarioForm="ngForm" (ngSubmit)="registrar()">
+              <div class="mb-3">
+                  <label for="firstname" class="form-label">Nombres</label>
+                  <input type="text" class="form-control" id="firstName" name="firstName" #lastName="ngModel" [(ngModel)]="user.name">
+              </div>
+              <div class="mb-3">
+                  <label for="email" class="form-label">Correo</label>
+                  <input type="email" class="form-control" id="email" name="email" #email="ngModel" [(ngModel)]="user.email">
+              </div>
+              <div class="mb-3">
+                  <label for="rol" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="rol" name="rol" #rol="ngModel" [(ngModel)]="user.contra">
+              </div>
+              <button type="submit" class="btn btn-primary">Registrar Usuario</button>
+          </form>
+      </div>
+  </div>
+
+</div>

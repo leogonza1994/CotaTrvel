@@ -1,0 +1,49 @@
+<section class="fondo">
+    <div class="overlay"></div>
+    <h1>Formulario de reserva</h1>
+    
+    <form #registrarReservaForm="ngForm" (ngSubmit)="registro()">
+        
+        <div class='field'>
+            <label>Restaurante</label>
+            <select 
+            [(ngModel)]="user.restaurante"
+            #restaurante="ngModel"
+            name='estadoReserva'
+            id= "inputReserva"
+            
+            >
+                <option selected disabled>Sel. una opción</option>
+                <option value= "La Provinvia">La Provincia</option>
+                <option value= "Balsamico">Balsamico</option>
+            </select> 
+        </div>
+
+        <div class='field'>
+            <label>Fecha reserva</label>
+            <input name='fecha' type='date' id="fecha"  #fechaReserva="ngModel" required [(ngModel)]="user.fechaReserva" autocomplete />
+        </div>
+        <div class='field'>
+            <label>Hora</label>
+            <input name='hora' type='time' id="hora" #horaReserva="ngModel" required [(ngModel)]="user.horaReserva" autocomplete />
+        </div>
+        <div class='field'>
+            <label>Número de personas</label>
+            <input name='personas' type='number' #numeroPersonas="ngModel" required [(ngModel)]="user.numPersonas" autocomplete />
+        </div>
+        <div class='field'>
+            <label>Celular</label>
+            <input name='Celular' type='number' #celular="ngModel" required [(ngModel)]="user.celular" autocomplete />
+        </div>
+        <div class='field'>
+            <label>Correo</label>
+            <input name='Email' type='email' #email="ngModel" required [(ngModel)]="user.email" autocomplete />
+        </div>
+        <div class='submit'>
+            <button>
+                RESERVAR
+            </button>
+        </div>
+    </form>
+    
+</section>
